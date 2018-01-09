@@ -32,21 +32,21 @@ public class Base {
 		if(System.getProperty("os.name").startsWith("Windows"))
 			isMac = false;
 		
-		if(browser.contentEquals("CHROME")) {
+//		if(browser.contentEquals("CHROME")) {
 			if(isMac)
 				System.setProperty("webdriver.chrome.driver", "chromedriver");
 			else
 				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 			driver = new ChromeDriver();
-		}
-		else {
-			if(isMac)
-				System.setProperty("webdriver.gecko.driver", "geckodriver");
-			else
-				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
-			driver = new FirefoxDriver();
-		}
-		
+//		}
+//		else {
+//			if(isMac)
+//				System.setProperty("webdriver.gecko.driver", "geckodriver");
+//			else
+//				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+//			driver = new FirefoxDriver();
+//		}
+//		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 

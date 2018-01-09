@@ -15,7 +15,7 @@ public class CommonStepDefinitions {
 	
 	@Given("^I am on HomePage$")
 	public void i_am_on_HomePage() throws Throwable {
-		driver.get(Base.HOME_URL);
+		Base.getDriver().get(Base.HOME_URL);
 	}
 	
 }
