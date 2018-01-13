@@ -46,7 +46,6 @@ public class Base {
 				System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
-		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
