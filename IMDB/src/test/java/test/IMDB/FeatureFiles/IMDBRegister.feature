@@ -6,20 +6,14 @@ Feature: Register user on IMDB
 		Given "<browser>" is opened
   		And I am on HomePage
   
-  Scenario Outline: Register user on IMDB with test data
+  Scenario: Register user on IMDB with test data
     When I click on <Other Sign in options>
     And I click on <Create a New Account>
 	  And Fill all the details
     Then I verify that user is logged in
+    When I click LogOut option in UserMenu
+    Then I verify user is logged out
   
-  	Examples:
-		| browser	|
-		| CHROME		|
-  
-  Scenario Outline: Logout already logged in user
-  		When I click LogOut option in UserMenu
-  		Then I verify user is logged out
-  		
-  	Examples:
-		| browser	|
-		| CHROME		|
+#  Scenario: Logout already logged in user
+#  		When I click LogOut option in UserMenu
+#  		Then I verify user is logged out
